@@ -25,3 +25,15 @@
         <%= form.submit %>
     </div>
 <% end %>
+
+<% @courses.each do |course| %>
+   <p>
+     <span><%= course.created_at %></span>
+   </p>
+   <p>
+    <span> <strong>course:</strong> </span>
+    <%= course.subject %>
+   </p>
+<% end %>
+
+

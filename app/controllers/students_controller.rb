@@ -1,6 +1,8 @@
 class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
+  # before_filter :set_student, except: [:index, :new, :create]
+
   def index
     @students = Student.all
 
@@ -15,6 +17,7 @@ class StudentsController < ApplicationController
   def show
     @student = Student.find(params[:id])
     @course = Course.new
+    @courses = @student.courses
 
     respond_to do |format|
       format.html # show.html.erb
@@ -42,6 +45,7 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(params[:student])
+
 
     respond_to do |format|
       if @student.save
@@ -80,5 +84,11 @@ class StudentsController < ApplicationController
       format.html { redirect_to students_url }
       format.json { head :no_content }
     end
+
+  private
+  def set_student
+    @student = Student.find(params[:id])
   end
+
+ end
 end
