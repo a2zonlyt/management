@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @student.level %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
+
+<%= form_for [@student, @course] do |form| %>
+   
+    <div class="fields">
+        <%= form.label :course %>
+        <%= form.text_field :subject %>
+    </div>
+
+    <div class="fields">
+        <%= form.submit %>
+    </div>
+<% end %>
