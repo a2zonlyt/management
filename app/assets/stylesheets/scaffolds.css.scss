@@ -1,15 +1,18 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: lightgrey;
+  color: #2E6444;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 50px;
   line-height: 18px;
+  padding-left: 300px;
+  background-image: url('/assets/abc.jpg');
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 50px;
   line-height: 18px;
+  padding-top: 50px;
 }
 
 pre {
@@ -26,8 +29,8 @@ a {
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: black;
+    background-color: #2E6444;   
   }
 }
 
