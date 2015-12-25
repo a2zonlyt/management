@@ -14,18 +14,6 @@
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
 
-<%= form_for [@student, @course] do |form| %>
-   
-    <div class="fields">
-        <%= form.label :course %>
-        <%= form.text_field :subject %>
-    </div>
-
-    <div class="fields">
-        <%= form.submit %>
-    </div>
-<% end %>
-
 <% @courses.each do |course| %>
    <p>
      <span><%= course.created_at %></span>
@@ -35,5 +23,3 @@
     <%= course.subject %>
    </p>
 <% end %>
-
-
