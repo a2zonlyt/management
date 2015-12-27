@@ -18,6 +18,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     @course = Course.new
     @courses = @student.courses
+    @attachments = @student.courses
 
     respond_to do |format|
       format.html # show.html.erb
@@ -84,11 +85,5 @@ class StudentsController < ApplicationController
       format.html { redirect_to students_url }
       format.json { head :no_content }
     end
-
-  private
-  def set_student
-    @student = Student.find(params[:id])
-  end
-
  end
 end

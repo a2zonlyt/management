@@ -22,6 +22,7 @@ class CoursesController < ApplicationController
   # GET /courses/new.json
   def new
     @course = Course.new
+    @course.attachments.new 
   end
 
   # GET /courses/1/edit

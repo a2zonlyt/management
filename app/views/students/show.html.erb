@@ -23,7 +23,14 @@
      <span><%= course.created_at %></span>
    </p>
    <p>
-    <span> <strong>course:</strong> </span>
+    <span> <strong>Subject:</strong> </span>
     <%= course.subject %>
    </p>
+
+   <p>
+  <%= image_tag @student.attachments.first.photo.url(:medium) if @student.attachments.present? %>
+   </p>
+
 <% end %>
+
+
