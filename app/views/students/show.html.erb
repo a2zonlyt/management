@@ -6,6 +6,10 @@
 </p>
 
 <p>
+  <%= image_tag @student.attachments.first.photo.url(:medium) if @student.attachments.present? %>
+</p>
+
+<p>
   <b>Level:</b>
   <%= @student.level %>
 </p>
